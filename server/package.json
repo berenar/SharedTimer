@@ -1,0 +1,17 @@
+{
+  "name": "shared-timer-server",
+  "version": "1.0.0",
+  "description": "Shared Timer code challenge",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "timer",
+    "challenge"
+  ],
+  "author": "Bernat Pericàs Serra",
+  "license": "MIT"
+}
