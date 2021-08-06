@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "test": "mocha -r ts-node/register tests/**/*.spec.ts --exit",
-    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
     "build": "npm run lint && npm run format && tsc",
-    "start:prod": "node dist/index.js",
+    "start": "node dist/server.js",
     "lint": "eslint --cache --fix --max-warnings 0 'src/**/*.ts'",
     "format": "prettier --write 'src/**/*.ts'"
   },
