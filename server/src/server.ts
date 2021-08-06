@@ -1,14 +1,33 @@
 /* eslint-disable no-console */
+import * as dotenv from 'dotenv';
 import fastify from 'fastify';
+import fastifyBlipp from 'fastify-blipp';
+import fastifyCors from 'fastify-cors';
+import * as routes from './modules/routes';
+import * as t from './types';
+
+// Load environment variables from .env
+dotenv.config();
 
 const serverOptions = { ignoreTrailingSlash: true };
-const server = fastify(serverOptions);
+const server: t.fastify.Instance = fastify(serverOptions);
+const service = '/timer';
+const version = '/api/v1/main';
+const baseRoute = `${service}${version}`;
+
+// Plugins
+server.register(fastifyCors, {}); //TODO configure origins
+server.register(fastifyBlipp);
+
+// Load routes
+server.register(routes.main, { prefix: `${baseRoute}/` });
 
 const start = async () => {
   try {
     const port = process.env.PORT || 3000;
     console.log(`Listening on port ${port}`);
     await server.listen(port, '0.0.0.0');
+    server.blipp(); //Print routes
   } catch (err) {
     console.log(err);
     server.log.error(err);
