@@ -66,8 +66,8 @@
 
   justify-content: center;
 }
-.playButton {
-  margin: 5px;
+.playPauseButton {
+  margin: 10px;
 }
 
 .toggleSwitch {

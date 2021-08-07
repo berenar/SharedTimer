@@ -1,5 +1,5 @@
 import R from 'react';
-import { Play } from '../assets/svgs';
+import { Play, Pause } from '../assets/svgs';
 import { useStopwatch } from 'react-timer-hook';
 import * as Utils from '../utils';
 
@@ -25,7 +25,8 @@ export const Stopwatch = (props: ChildProps): R.ReactElement => {
       <div>
         <button className="mainButton" onClick={() => clickHandler()}>
           <div className="playAndTime">
-            <Play color="white" className="playButton" />
+            {!isRunning && <Play color="white" className="playPauseButton" />}
+            {isRunning && <Pause color="white" className="playPauseButton" />}
             {Utils.displayHumanTime(hours, minutes, seconds)}
           </div>
         </button>
