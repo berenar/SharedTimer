@@ -7,11 +7,11 @@ interface ChildProps {
 }
 
 export const Stopwatch = (props: ChildProps): R.ReactElement => {
-  const { seconds, minutes, hours, isRunning, start, pause } = useStopwatch({});
+  const { seconds, minutes, hours, isRunning, start, reset } = useStopwatch({});
 
   const clickHandler = () => {
     if (isRunning) {
-      pause();
+      reset(undefined, false);
       const ms = Utils.humanToMilliseconds(hours, minutes, seconds);
       props.addToTotal(ms);
     } else {
