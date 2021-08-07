@@ -11,7 +11,7 @@ const App: R.FunctionComponent = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <SVG.Logo fillColor="black" className="logo" />
+        <SVG.Logo color="black" className="logo" />
         <Component.ThemeChanger light={light} className="themeChanger" />
       </header>
       <div className="App-Body">

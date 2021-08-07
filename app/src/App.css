@@ -12,16 +12,22 @@
 }
 
 .logo {
-  margin: 10px;
-  flex: 1;
-  height: 3vh;
-
+  margin: 20px;
+  align-items: center;
+  display: flex;
   color: #373838;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .themeChanger {
+  margin: 20px;
   margin-left: auto;
   display: flex;
+  align-items: center;
+}
+.themeChanger > * {
+  margin: 7px;
 }
 
 .App-Body {
@@ -48,7 +54,20 @@
   margin-top: 40px;
   background-color: #373838;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
   line-height: 16.41px;
+}
+.playAndTime {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.playButton {
+  margin: 5px;
+}
+
+.toggleSwitch {
+  margin: 3px;
 }
