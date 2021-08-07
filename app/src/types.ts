@@ -6,7 +6,7 @@ export interface StandardResponse {
 
 export type HHMMSS = `${number}:${number}:${number}`;
 
-export enum HTTPverbs {
+export enum HttpVerbs {
   Get = 'GET',
   Post = 'POST',
   Put = 'PUT',

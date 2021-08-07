@@ -19,14 +19,11 @@ export const Stopwatch = (props: ChildProps): R.ReactElement => {
     }
   };
 
-  const displayHumanTime = (h: number, m: number, s: number) =>
-    `${Utils.withZero(h)}:${Utils.withZero(m)}:${Utils.withZero(s)}`;
-
   return (
     <>
       <div>
         <button className="mainButton" onClick={() => clickHandler()}>
-          {displayHumanTime(hours, minutes, seconds)}
+          {Utils.displayHumanTime(hours, minutes, seconds)}
         </button>
       </div>
     </>

@@ -21,13 +21,11 @@ export const Timers = (props: Props): R.ReactElement => {
     fetch();
   });
 
-  const updateSharedTime = (elapsed: number) => alert(`Add ${elapsed} to total time.`); //TODO
-
   return (
     <div className={props.className}>
       <div className="sharedTimer">{sharedTime}</div>
       <div className="localTimer">
-        <Stopwatch addToTotal={updateSharedTime} />
+        <Stopwatch addToTotal={(elapsed) => Api.incrementTime(elapsed)} />
       </div>
     </div>
   );

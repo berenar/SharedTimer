@@ -6,13 +6,16 @@ export function millisecondsToHuman(ms: number): string {
   return humanTime;
 }
 
-export const withZero = (num: number): string => {
+export const humanToMilliseconds = (hours: number, minutes: number, seconds: number): number => {
+  return hours * 3600 * 1000 + minutes * 60 * 1000 + seconds * 1000;
+};
+
+export const displayHumanTime = (h: number, m: number, s: number): string =>
+  `${withZero(h)}:${withZero(m)}:${withZero(s)}`;
+
+const withZero = (num: number): string => {
   const textNum: string = num.toString();
   if (textNum.length > 2) throw new Error('Two digits max.');
   if (textNum.length == 1) return `0${textNum}`;
   return textNum;
-};
-
-export const humanToMilliseconds = (hours: number, minutes: number, seconds: number) => {
-  return hours * 3600 * 1000 + minutes * 60 * 1000 + seconds * 1000;
 };
