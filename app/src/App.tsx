@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as R from 'react';
 import './App.css';
+import * as Component from './components';
+import * as SVG from './assets/svgs';
 
-function App() {
+const App: R.FunctionComponent = () => {
+  const [light, setLight] = R.useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <SVG.Logo fillColor="black" className="logo" />
+        <Component.ThemeChanger light={light} className="themeChanger" />
       </header>
+      <body className="App-Body">
+        <Component.Timers light={light} className="timers" />
+      </body>
     </div>
   );
-}
+};
 
 export default App;
