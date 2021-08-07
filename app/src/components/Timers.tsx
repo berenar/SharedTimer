@@ -22,7 +22,7 @@ export const Timers = (props: Props): R.ReactElement => {
   return (
     <div className={props.className}>
       <div className="sharedTimer">{sharedTime}</div>
-      <div className="localTimer">00:00:01 local</div>
+      <div className="localTimer"></div>
     </div>
   );
 };

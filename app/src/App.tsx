@@ -4,6 +4,8 @@ import * as Component from './components';
 import * as SVG from './assets/svgs';
 
 const App: R.FunctionComponent = () => {
+  // TODO
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [light, setLight] = R.useState(true);
 
   return (
@@ -12,9 +14,9 @@ const App: R.FunctionComponent = () => {
         <SVG.Logo fillColor="black" className="logo" />
         <Component.ThemeChanger light={light} className="themeChanger" />
       </header>
-      <body className="App-Body">
+      <div className="App-Body">
         <Component.Timers light={light} className="timers" />
-      </body>
+      </div>
     </div>
   );
 };
