@@ -1,27 +1,52 @@
 # SharedTimer
 
-SharedTimer is a shared timer that uses Node, React, TypeScript, //TODO.
+SharedTimer is a shared timer that uses TypeScript, React, Node, Fastify, Postgres and more awesome technologies to solve the Timer Code Challenge.
 
-## Database
+Disclaimer: This project has three parts, the FrontEnd (aka App), the BackEnd (aka Server) and the Database (aka Persistence). Although the main README contains the important stuff, details will belong in the three _child_ READMEs:
 
-//TODO
+- [Database ](/database/README.md)
+- [Server](/server/README.md)
+- [App](/app/README.md)
 
-## Server
+## Quick local setup
 
-Minimal server that coordinates all users so they can share a common counter.
+### Database
 
-See [more](/server/README.md).
+One table with one (and only one) row in a containerized Postgres.
 
-## App
+#### Create and start the database in a docker container
 
-Minimal app to run and stop a timer, see the common counter and change the theme
+```bash
+cd database
+chmod +x init.sh
+bash init.sh
+```
 
-See [app](/app/README.md).
+### Server
+
+A minimal node server that coordinates all users so they can share a common counter.
+
+#### Build and start
+
+```bash
+npm run install
+npm run build
+npm run start
+```
+
+### App
+
+Minimal app to run and stop a timer, see the common counter and change the theme.
+
+```bash
+npm run install
+npm run start
+```
 
 ## Future improvements
 
 - Using web sockets may be a better approach to this.
-  - Shared timer would be updated on real time.
+- Using an inMemory database to increase performance.
 
 ## Code Challenge Feedback
 
