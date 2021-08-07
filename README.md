@@ -48,7 +48,7 @@ npm run start
 - Using web sockets may be a better approach to this.
 - Using an in-memory database to increase performance.
 
-## Code Challenge Feedback
+## Code Challenge Feedback
 
 ### Limited requirements (may be on purpose)
 
