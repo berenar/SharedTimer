@@ -36,3 +36,19 @@
   height: 30vh;
   width: 70vw;
 }
+
+.sharedTimer {
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.mainButton {
+  width: 200px;
+  height: 42px;
+  margin-top: 40px;
+  background-color: #373838;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 16.41px;
+}
