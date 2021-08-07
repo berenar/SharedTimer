@@ -5,7 +5,7 @@ export const main = (fastify: t.Instance, _opts: t.Options, done: () => void): v
   fastify.route({
     method: 'GET',
     url: '/current',
-    async handler(_request, reply: t.StandardResponse<t.Time>) {
+    async handler(_request, reply: t.StandardResponse<t.timeMs>) {
       reply.send({
         status: 'OK',
         message: 'Current shared time',
