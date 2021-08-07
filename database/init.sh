@@ -5,8 +5,8 @@ echo ' => Run containerised postgres'
 # -v local path can't include special characters
 docker run -d \
 	--name shared-timer-database \
-	-e POSTGRES_PASSWORD=default \
   -e POSTGRES_USER=default \
+	-e POSTGRES_PASSWORD=default \
 	-v ${HOME}/postgres-data/:/var/lib/postgresql/data \
   -p 5432:5432 \
   postgres

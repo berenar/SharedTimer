@@ -1,16 +1,14 @@
 /* eslint-disable no-console */
 import * as dotenv from 'dotenv';
+dotenv.config();
 import fastify from 'fastify';
 import fastifyBlipp from 'fastify-blipp';
 import fastifyCors from 'fastify-cors';
 import * as routes from './modules/routes';
 import * as t from './types';
 
-// Load environment variables from .env
-dotenv.config();
-
 const serverOptions = { ignoreTrailingSlash: true };
-const server: t.fastify.Instance = fastify(serverOptions);
+const server: t.Instance = fastify(serverOptions);
 const service = '/timer';
 const version = '/api/v1/main';
 const baseRoute = `${service}${version}`;
