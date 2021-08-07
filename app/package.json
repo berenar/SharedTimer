@@ -13,12 +13,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-timer-hook": "^3.0.4",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
   },
   "devDependencies": {
-    "prettier": "^2.3.1",
-    "eslint": "^7.28.0"
+    "eslint": "^7.28.0",
+    "prettier": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
