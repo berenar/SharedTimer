@@ -5,3 +5,10 @@ export interface StandardResponse {
 }
 
 export type HHMMSS = `${number}:${number}:${number}`;
+
+export enum HTTPverbs {
+  Get = 'GET',
+  Post = 'POST',
+  Put = 'PUT',
+  Delete = 'DELETE',
+}
