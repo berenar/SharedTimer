@@ -55,6 +55,11 @@
   font-size: 14px;
   line-height: 16.41px;
 }
+
+.mainButton:active {
+  transform: scale(0.85);
+  transition: all ease 0.1s;
+}
 .playAndTime {
   display: flex;
   align-items: center;
