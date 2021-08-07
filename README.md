@@ -2,6 +2,10 @@
 
 SharedTimer is a shared timer that uses Node, React, TypeScript, //TODO.
 
+## Database
+
+//TODO
+
 ## Server
 
 Minimal server that coordinates all users so they can share a common counter.
