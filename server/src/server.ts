@@ -24,7 +24,7 @@ server.register(routes.main, { prefix: `${baseRoute}/` });
 
 const start = async () => {
   try {
-    const port = process.env.PORT || 3000;
+    const port = process.env.SERVER_PORT || 3000;
     console.log(`Listening on port ${port}`);
     await server.listen(port, '0.0.0.0');
     server.blipp(); //Print routes
