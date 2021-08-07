@@ -22,7 +22,7 @@ export class Postgres {
       return result;
     } catch (err) {
       // eslint-disable-next-line no-console
-      console.log(`Error querying: ${text} with values ${values}`);
+      console.log(`Error querying: ${text} with values ${values.join(',')}`);
       throw err;
     } finally {
       client.release();
