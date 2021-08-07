@@ -10,12 +10,14 @@ const App: R.FunctionComponent = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <SVG.Logo color="black" className="logo" />
-        <Component.ThemeChanger light={light} className="themeChanger" />
-      </header>
-      <div className="App-Body">
-        <Component.Timers light={light} className="timers" />
+      <div className={`nightMode-${light ? `disabled` : `enabled`}`}>
+        <header className="App-header">
+          <SVG.Logo color="black" className="logo" />
+          <Component.ThemeChanger light={light} className="themeChanger" />
+        </header>
+        <div className="App-Body">
+          <Component.Timers light={light} className="timers" />
+        </div>
       </div>
     </div>
   );

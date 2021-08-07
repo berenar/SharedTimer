@@ -1,10 +1,6 @@
-/* TODO: for debug only */
-* {
-  outline: 1px red dotted;
-}
-
-.App {
-  /* background-color: #282c34; */
+.nightMode-enabled {
+  filter: invert(100%) brightness(4) grayscale(100%);
+  background-color: #f7f6f3;
 }
 
 .App-header {
