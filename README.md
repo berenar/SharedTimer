@@ -10,13 +10,13 @@ SharedTimer is a shared timer that uses Node, React, TypeScript, //TODO.
 
 Minimal server that coordinates all users so they can share a common counter.
 
-See [more](server/README.md).
+See [more](/server/README.md).
 
 ## App
 
 Minimal app to run and stop a timer, see the common counter and change the theme
 
-See [app](app/README.md).
+See [app](/app/README.md).
 
 ## Future improvements
 
