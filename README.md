@@ -21,8 +21,21 @@ See [app](/app/README.md).
 ## Future improvements
 
 - Using web sockets may be a better approach to this.
+  - Shared timer would be updated on real time.
 
-## Feedback
+## Code Challenge Feedback
+
+### Limited requirements (may be on purpose)
+
+As stated in [Future improvements](#future-improvements), the requirements and instructions where headed towards a solution with HTTP requests, although it's clearly not the best approach. If the given time to solve this challenge wouldn't have been on a weekend, I would have asked.
+
+### Reduce user confusion
+
+What if a user 1 has the app opened with the timer paused, and another user 2 updates the shared time? When the user 1 starts the local timer and updates the shared one, it may get confused, because he/she has started the timer with an outdated value.
+
+A quick and easy solution would be to update the shared timer also when starting the local timer. I haven't done it because as the requirements say:
+
+> The big timer should be updated when the app loads on the screen, and when the user stops his timer.
 
 ## Contributing
 
