@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as R from 'react';
 import * as Api from '../api';
 import * as Utils from '../utils';
+import { Stopwatch } from './Stopwatch';
 
 interface Props {
   className: string;
@@ -19,10 +21,14 @@ export const Timers = (props: Props): R.ReactElement => {
     fetch();
   });
 
+  const updateSharedTime = (elapsed: number) => alert(`Add ${elapsed} to total time.`); //TODO
+
   return (
     <div className={props.className}>
       <div className="sharedTimer">{sharedTime}</div>
-      <div className="localTimer"></div>
+      <div className="localTimer">
+        <Stopwatch addToTotal={updateSharedTime} />
+      </div>
     </div>
   );
 };
