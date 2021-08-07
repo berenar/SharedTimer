@@ -6,7 +6,6 @@ import { Stopwatch } from './Stopwatch';
 
 interface Props {
   className: string;
-  light: boolean;
 }
 
 export const Timers = (props: Props): R.ReactElement => {

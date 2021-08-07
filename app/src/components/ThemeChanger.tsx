@@ -3,11 +3,11 @@ import * as SVG from '../assets/svgs';
 import Switch from 'react-switch';
 interface Props {
   className: string;
-  light: boolean;
+  lights: boolean;
+  setLights: (on: boolean) => void;
 }
 
 export const ThemeChanger = (props: Props): R.ReactElement => {
-  const [lights, setLights] = R.useState(true);
   return (
     <div className={props.className}>
       <SVG.Moon color="black" />
@@ -17,8 +17,8 @@ export const ThemeChanger = (props: Props): R.ReactElement => {
         onColor="#373838"
         checkedIcon={false}
         uncheckedIcon={false}
-        onChange={(v) => setLights(v)}
-        checked={lights}
+        onChange={(val) => props.setLights(val)}
+        checked={props.lights}
       />
       <SVG.Sun color="black" />
     </div>

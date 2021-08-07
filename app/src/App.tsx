@@ -4,19 +4,17 @@ import * as Component from './components';
 import * as SVG from './assets/svgs';
 
 const App: R.FunctionComponent = () => {
-  // TODO
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [light, setLight] = R.useState(true);
+  const [lights, setLights] = R.useState(true);
 
   return (
     <div className="App">
-      <div className={`nightMode-${light ? `disabled` : `enabled`}`}>
+      <div className={`nightMode-${lights ? `disabled` : `enabled`}`}>
         <header className="App-header">
           <SVG.Logo color="black" className="logo" />
-          <Component.ThemeChanger light={light} className="themeChanger" />
+          <Component.ThemeChanger lights={lights} className="themeChanger" setLights={setLights} />
         </header>
         <div className="App-Body">
-          <Component.Timers light={light} className="timers" />
+          <Component.Timers className="timers" />
         </div>
       </div>
     </div>
