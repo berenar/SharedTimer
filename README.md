@@ -41,12 +41,11 @@ DATABASE_PASSWORD=bernatpassword
 SERVER_PORT=3001
 ```
 
-#### Build and start
+#### Quickly run it containerised
 
 ```bash
-npm run install
-npm run build
-npm run start
+docker build . -t shared-timer-server-image
+docker run -d --name server-container -p 3001:3000 shared-timer-server-image
 ```
 
 ### App

@@ -62,6 +62,14 @@ npm run lint
 npm run format
 ```
 
+### Quickly run it containerised
+
+```
+docker build . -t shared-timer-server-image
+docker run -d --name server-container -p 3001:3000 shared-timer-server-image
+
+```
+
 ## Structure
 
 ```
