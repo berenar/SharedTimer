@@ -18,8 +18,8 @@ One table with one (and only one) row in a containerized Postgres.
 
 ```bash
 cd database
-docker build -t testpostgres .
-docker run -d --name testpostgres-container -p 5432:5432 testpostgres
+docker build -t shared-timer-db-image .
+docker run -d --name shared-timer-db-container -p 5432:5432 shared-timer-db-image
 ```
 
 ### Server
