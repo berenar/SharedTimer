@@ -44,17 +44,21 @@ SERVER_PORT=3001
 #### Quickly run it containerised
 
 ```bash
+cd server
 docker build . -t shared-timer-server-image
-docker run -d --name server-container -p 3001:3000 shared-timer-server-image
+docker run -d --name shared-timer-server-container -p 3001:3000 shared-timer-server-image
 ```
 
 ### App
 
 Minimal app to run and stop a timer, see the common counter and change the theme.
 
+#### Quickly run it containerised
+
 ```bash
-npm run install
-npm run start
+cd app
+docker build . -t shared-timer-app-image
+docker run -d --name shared-timer-app-container -p 3000:3000 shared-timer-app-image
 ```
 
 ## Future improvements

@@ -7,6 +7,13 @@ React + TypeScript app for SharedTimer.
 - Responsive
 - Dark theme
 
+## Quickly run it containerised
+
+```bash
+docker build . -t shared-timer-app-image
+docker run -d --name shared-timer-app-container -p 3000:3000 shared-timer-app-image
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

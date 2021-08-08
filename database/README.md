@@ -3,13 +3,13 @@
 ### Build Docker container
 
 ```bash
-docker build -t testpostgres .
+docker build -t shared-timer-db-image .
 ```
 
 ### Run the container
 
 ```bash
-docker run -d --name testpostgres-container -p 5432:5432 testpostgres
+docker run -d --name shared-timer-db-container -p 5432:5432 shared-timer-db-image
 ```
 
 ### Attach to the database
