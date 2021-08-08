@@ -1,3 +1,5 @@
+GRANT ALL PRIVILEGES ON DATABASE sharedtimer TO bernat;
+
 CREATE TABLE IF NOT EXISTS time_counter (
   shared_time_ms BIGINT NOT NULL,
   updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
@@ -23,12 +25,3 @@ CREATE TRIGGER set_timestamp
 
 -- Insert one and only row as the time
 INSERT INTO time_counter(shared_time_ms) VALUES(0);
-
-
--- time_counter
--- -----------------------------------------------------------
--- | shared_time_ms  |         updated_at         | only_one |
---  -----------------+----------------------------+-----------
--- |     00:00:00    | 2021-08-07 01:06:29.327188 |    t     |
--- -----------------------------------------------------------
--- (1 row)

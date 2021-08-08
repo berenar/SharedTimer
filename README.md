@@ -18,8 +18,8 @@ One table with one (and only one) row in a containerized Postgres.
 
 ```bash
 cd database
-chmod +x init.sh
-bash init.sh
+docker build -t testpostgres .
+docker run -d --name testpostgres-container -p 5432:5432 testpostgres
 ```
 
 ### Server
@@ -36,8 +36,8 @@ Create an `.env` file in the root of the server directory with the following:
 DATABASE_HOST=localhost
 DATABASE_PORT=5432
 DATABASE_NAME=sharedtimer
-DATABASE_USER=default
-DATABASE_PASSWORD=default
+DATABASE_USER=bernat
+DATABASE_PASSWORD=bernatpassword
 SERVER_PORT=3001
 ```
 

@@ -1,50 +1,39 @@
 # SharedTimer-database
 
-### Create and start the database in a docker container
+### Build Docker container
 
 ```bash
-cd database
-chmod +x init.sh
-bash init.sh
+docker build -t testpostgres .
 ```
 
-### Stop database container
+### Run the container
 
 ```bash
-docker stop shared-timer-database
+docker run -d --name testpostgres-container -p 5432:5432 testpostgres
 ```
 
-### Start the database container
-
-```bash
-docker start shared-timer-database
-```
-
-### Drop the database
-
-```bash
-cd database
-chmod +x init.sh
-bash destroy.sh
-```
-
-### Delete Docker container
-
-```bash
-
-
-```
-
-### Start a bash session
+### Attach to the database
 
 Uses [psql](https://www.postgresql.org/docs/13/app-psql.html)
 
 ```bash
-docker exec -it shared-timer-database psql -h localhost -U default sharedtimer
+docker exec -it testpostgres-container psql -h localhost -U bernat sharedtimer
 ```
 
-### End a bash session
+### Exit the database
 
 ```psql
 # exit
+```
+
+### Stop the container
+
+```bash
+docker stop testpostgres-container
+```
+
+### Delete the container
+
+```bash
+docker rm testpostgres-container
 ```
