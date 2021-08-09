@@ -8,7 +8,7 @@ interface ChildProps {
 }
 
 export const Stopwatch = (props: ChildProps): R.ReactElement => {
-  // TODO: persist current time to LocalStorage and start it from there (offsetTimestamp)
+  // TODO: persist current time to sessionStorage and start it from there (offsetTimestamp)
   const { seconds, minutes, hours, isRunning, start, reset } = useStopwatch({});
 
   const clickHandler = () => {

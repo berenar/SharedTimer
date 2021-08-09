@@ -6,17 +6,17 @@ import * as SVG from './assets/svgs';
 import * as CONST from './constants';
 
 const App: R.FunctionComponent = () => {
-  const getLightsFromLocalStorage = (): boolean => {
-    const retrieved: string = localStorage.getItem(CONST.LIGHTS) || '';
+  const getLightsFromSession = (): boolean => {
+    const retrieved: string = sessionStorage.getItem(CONST.LIGHTS) || '{}';
     return JSON.parse(retrieved) === true;
   };
 
   const setLIghtsAndPersistLS = (lights: boolean): void => {
     setLights(lights);
-    localStorage.setItem(CONST.LIGHTS, String(lights));
+    sessionStorage.setItem(CONST.LIGHTS, String(lights));
   };
 
-  const [lights, setLights] = R.useState(getLightsFromLocalStorage());
+  const [lights, setLights] = R.useState(getLightsFromSession());
 
   printEnv();
 
