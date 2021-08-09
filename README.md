@@ -8,43 +8,27 @@ Disclaimer: This project has three parts, the FrontEnd (aka App), the BackEnd (a
 - [Server](/server/README.md)
 - [App](/app/README.md)
 
-## Quick local setup
+## Run it all!
+
+Run this one-liner on the root of the project
+
+```bash
+docker-compose up --build
+```
+
+And visit [http://localhost:3000](http://localhost:3000)
 
 ### Database
 
 One table with one (and only one) row in a containerized Postgres.
 
-#### Create and start the database in a docker container
-
-```bash
-cd database
-docker build -t shared-timer-db-image .
-docker run -d --name shared-timer-db-container -p 5432:5432 shared-timer-db-image
-```
-
 ### Server
 
 A minimal node server that coordinates all users, so they can share a common counter.
 
-#### Quickly run it containerised
-
-```bash
-cd server
-docker build . -t shared-timer-server-image
-docker run -d --name shared-timer-server-container -p 3001:3000 shared-timer-server-image
-```
-
 ### App
 
 Minimal app to run and stop a timer, see the common counter and change the theme.
-
-#### Quickly run it containerised
-
-```bash
-cd app
-docker build . -t shared-timer-app-image
-docker run -d --name shared-timer-app-container -p 3000:3000 shared-timer-app-image
-```
 
 ## Future improvements
 

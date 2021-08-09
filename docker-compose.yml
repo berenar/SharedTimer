@@ -1,24 +1,28 @@
 version: "3"
+
 services:
   persistence:
     build:
       context: ./database
       dockerfile: Dockerfile
-    ports:
-      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
+    depends_on:
+      - persistence
     ports:
-      - "3001:3000"
+      - "3001:3001"
   app:
     build:
       context: ./app
       dockerfile: Dockerfile
+    depends_on:
+      - server
     ports:
       - "3000:3000"
+
 volumes:
   pgdata:
