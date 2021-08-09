@@ -1,12 +1,20 @@
 # SharedTimer
 
+## See it online on AWS!
+
+[Here](http://ec2-3-67-89-65.eu-central-1.compute.amazonaws.com:3000)
+
+## Description
+
 SharedTimer is a shared timer that uses TypeScript, React, Node, Fastify, Postgres and more awesome technologies to solve the Timer Code Challenge.
 
-Disclaimer: This project has three parts, the FrontEnd (aka App), the BackEnd (aka Server) and the Database (aka Persistence). Although the main README contains the important stuff, details will belong in the three _child_ READMEs:
+## Front + Back + DataBase
 
-- [Database ](/database/README.md)
-- [Server](/server/README.md)
+This project has three parts, the React web app, the Node Server and the Postgres Database. Although the main README contains the important stuff, details will belong in the three _child_ READMEs:
+
 - [App](/app/README.md)
+- [Server](/server/README.md)
+- [Database](/database/README.md)
 
 ## Run it all!
 
