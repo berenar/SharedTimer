@@ -4,7 +4,7 @@ import Switch from 'react-switch';
 interface Props {
   className: string;
   lights: boolean;
-  setLights: (on: boolean) => void;
+  changeHandler: (on: boolean) => void;
 }
 
 export const ThemeChanger = (props: Props): R.ReactElement => {
@@ -17,7 +17,7 @@ export const ThemeChanger = (props: Props): R.ReactElement => {
         onColor="#373838"
         checkedIcon={false}
         uncheckedIcon={false}
-        onChange={(val) => props.setLights(val)}
+        onChange={(val) => props.changeHandler(val)}
         checked={props.lights}
       />
       <SVG.Sun color="black" />
