@@ -7,7 +7,7 @@ import * as CONST from './constants';
 
 const App: R.FunctionComponent = () => {
   const getLightsFromSession = (): boolean => {
-    const retrieved: string = sessionStorage.getItem(CONST.LIGHTS) || '{}';
+    const retrieved: string = sessionStorage.getItem(CONST.LIGHTS) || '""';
     return JSON.parse(retrieved) === true;
   };
 
