@@ -10,12 +10,12 @@ COPY .prettierrc.json ./
 # copy source code to /app/src folder
 COPY src /app/src
 
-# check files list
-RUN ls -a
+# copy environment files
+COPY .env ./
 
 RUN npm install
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD [ "node", "./dist/server.js" ]

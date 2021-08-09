@@ -6,6 +6,9 @@ WORKDIR /app
 
 # copy everything
 COPY . /app
+
+# copy environment files
+COPY .env ./app
  
 # Installs all node packages
 RUN npm install
