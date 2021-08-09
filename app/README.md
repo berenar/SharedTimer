@@ -5,7 +5,18 @@ React + TypeScript app for SharedTimer.
 ## Features
 
 - Responsive
-- Dark theme
+- Night theme
+
+#### Create an environment file
+
+Disclaimer: As this is for demo purposes, it's already created and not gitnignored, don't ever publish your passwords.
+
+Create an `.env` file in the root of the app directory with the following:
+
+```
+SERVER_HOST=server
+SERVER_PORT=3001
+```
 
 ## Quickly run it containerised
 

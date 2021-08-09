@@ -1,6 +1,7 @@
 import * as Types from './types';
+import env from 'react-dotenv';
 
-const url = 'http://localhost:3001/timer/api/v1/main'; //TODO: hardcoded
+const url = `http://${env.SERVER_HOST}:${env.SERVER_PORT}/timer/api/v1/main`;
 interface CallOptions {
   method: Types.HttpVerbs;
   headers?: Headers;

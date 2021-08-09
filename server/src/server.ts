@@ -26,6 +26,7 @@ const start = async () => {
     console.log(`Listening on port ${port}`);
     await server.listen(port, '0.0.0.0');
     server.blipp(); //Print routes
+    printEnv();
   } catch (err) {
     console.log(err);
     server.log.error(err);
@@ -41,3 +42,8 @@ process.on('unhandledRejection', (error) => {
 });
 
 start();
+
+const printEnv = () =>
+  console.log(`${process.env.DATABASE_HOST}, ${process.env.DATABASE_PORT},
+  ${process.env.DATABASE_NAME}, ${process.env.DATABASE_USER},
+  ${process.env.DATABASE_PASSWORD}, ${process.env.SERVER_PORT}`);

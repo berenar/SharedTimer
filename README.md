@@ -26,21 +26,6 @@ docker run -d --name shared-timer-db-container -p 5432:5432 shared-timer-db-imag
 
 A minimal node server that coordinates all users, so they can share a common counter.
 
-#### Create an environment file
-
-Disclaimer: this is for demo purposes, don't ever publish your passwords.
-
-Create an `.env` file in the root of the server directory with the following:
-
-```
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_NAME=sharedtimer
-DATABASE_USER=bernat
-DATABASE_PASSWORD=bernatpassword
-SERVER_PORT=3001
-```
-
 #### Quickly run it containerised
 
 ```bash

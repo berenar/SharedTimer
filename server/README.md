@@ -3,9 +3,9 @@
 Node + TypeScript server for SharedTimer.
 Depends on a Postgres Database.
 
-## Create an environment file
+#### Create an environment file
 
-Disclaimer: this is for demo purposes, don't ever publish your passwords.
+Disclaimer: As this is for demo purposes, it's already created and not gitnignored, don't ever publish your passwords.
 
 Create an `.env` file in the root of the server directory with the following:
 
@@ -13,8 +13,8 @@ Create an `.env` file in the root of the server directory with the following:
 DATABASE_HOST=localhost
 DATABASE_PORT=5432
 DATABASE_NAME=sharedtimer
-DATABASE_USER=default
-DATABASE_PASSWORD=default
+DATABASE_USER=bernat
+DATABASE_PASSWORD=bernatpassword
 SERVER_PORT=3001
 ```
 
@@ -65,8 +65,7 @@ npm run format
 ### Quickly run it containerised
 
 ```bash
-docker build . -t shared-timer-server-image
-docker run -d --name shared-timer-server-container -p 3001:3000 shared-timer-server-image
+docker build . -t shared-timer-server-image && docker run -d --name shared-timer-server-container -p 3001:3000 shared-timer-server-image
 ```
 
 ## Structure
