@@ -8,7 +8,7 @@
 
 SharedTimer is a shared timer that uses TypeScript, React, Node, Fastify, Postgres and more awesome technologies to solve the Timer Code Challenge.
 
-![](./sharedTimerQuickDemo.gif)
+![](./sharedTimerDemo.gif)
 
 ## Front + Back + DataBase
 
