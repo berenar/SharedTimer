@@ -4,6 +4,9 @@ interface ClassColor {
   className: string;
   color: string;
 }
+interface onlyFill {
+  color: string;
+}
 
 export const Logo = (props: ClassColor): R.ReactElement => (
   <div className={props.className}>
@@ -17,10 +20,6 @@ export const Logo = (props: ClassColor): R.ReactElement => (
     </svg>
   </div>
 );
-
-interface onlyFill {
-  color: string;
-}
 
 export const Moon = (props: onlyFill): R.ReactElement => (
   <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
